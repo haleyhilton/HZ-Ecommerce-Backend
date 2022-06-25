@@ -31,42 +31,6 @@ router.get('/:id', (req, res) => {
     })
 });
 
-// router.post('/', (req, res) => {
-//   // create a new category
-//   Category.create({
-//     //put something here
-//   })
-//   .then(data=>{
-//     res.json(data);
-//   }).catch(err=>{
-//     res.json(err);
-//   })
-// });
-
-// router.put('/:id', (req, res) => {
-//   // update a category by its `id` value
-//   .then(data=>{
-//     res.json(data);
-//   }).catch(err=>{
-//     res.json(err);
-//   })
-// });
-
-// //done
-// router.delete('/:id', (req, res) => {
-//   // delete a category by its `id` value
-//   Category.destroy({
-//     where: {
-//       id: req.params.id,
-//     }
-//   })
-//   .then(data=>{
-//     res.json(data);
-//   }).catch(err=>{
-//     res.json(err);
-//   })
-// });
-
 router.post('/', async (req, res) => {
   try {
     const categoryData = await Category.create(req.body);
